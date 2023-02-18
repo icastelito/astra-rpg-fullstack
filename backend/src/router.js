@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const magiasControladores = require("./controllers/magiasControladores");
 
-router.get("/", (req, res) => res.send("Ligma!"));
+router.get("/magias", magiasControladores.getAll);
 
 module.exports = router;

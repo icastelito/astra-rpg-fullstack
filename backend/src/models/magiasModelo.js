@@ -1,6 +1,7 @@
 const connection = require("./connection");
-const getAll = () => {
-  const magias = connection.execute();
+const getAll = async () => {
+  const magias = await connection.execute("SELECT * FROM magias");
+  return magias;
 
 };
 
